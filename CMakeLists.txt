@@ -4,6 +4,8 @@ project(hft-market-making VERSION 0.0.1 DESCRIPTION "CMF HFT market-making backt
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+option(HFT_NO_LOGGING "Compile out Logger::debug output" OFF)
+
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 
 include(cmake/GlobalSettings.cmake)

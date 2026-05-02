@@ -17,6 +17,9 @@ add_library(${TARGET} STATIC ${SRC})
 target_link_libraries(${TARGET} PUBLIC
     hft-market-making-common
 )
+if(HFT_NO_LOGGING)
+    target_compile_definitions(${TARGET} PUBLIC HFT_NO_LOGGING)
+endif()
 
 # executable
 set(TARGET hft-market-making)
