@@ -1,5 +1,15 @@
-file(GLOB SRC CONFIGURE_DEPENDS *.cpp)
-list(REMOVE_ITEM SRC main.cpp)
+set(SRC
+    ../types.cpp
+)
+
+file(GLOB_RECURSE IMPL_SRC CONFIGURE_DEPENDS
+    ../data_loader/*.cpp
+    ../execution/*.cpp
+    ../metrics/*.cpp
+    ../portfolio/*.cpp
+    ../strategy/*.cpp
+)
+list(APPEND SRC ${IMPL_SRC})
 
 # static library
 set(TARGET hft-market-making-lib)

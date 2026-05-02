@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.22 FATAL_ERROR)
 
 project(hft-market-making VERSION 0.0.1 DESCRIPTION "CMF HFT market-making backtester" LANGUAGES CXX C)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 
 include(cmake/GlobalSettings.cmake)
